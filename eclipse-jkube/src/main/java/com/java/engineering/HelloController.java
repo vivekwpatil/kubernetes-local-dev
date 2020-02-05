@@ -1,4 +1,4 @@
-package com.java.engineering.controller;
+package com.java.engineering;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ public class HelloController {
     public Map<String,String>  hello(@PathVariable String name) {
 
         HashMap m= new HashMap();
-        m.put("1", "Welcome to minikube demo " + name);
+        m.put("1", "Welcome to eclipse JKube demo using minikube " + name);
         return m;
     }
 }
