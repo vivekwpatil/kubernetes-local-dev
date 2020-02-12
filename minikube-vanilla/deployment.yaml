@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rocketservice-minikube-vanilla
+spec:
+  selector:
+    matchLabels:
+      app: rocketservice-minikube-vanilla
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: rocketservice-minikube-vanilla
+    spec:
+      containers:
+        - name: demo-backend
+          image: rocketservice-minikube-vanilla:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

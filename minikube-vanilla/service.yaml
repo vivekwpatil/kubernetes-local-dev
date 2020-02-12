@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rocketservice-minikube-vanilla
+  labels:
+    expose: "true"
+    app: rocketservice-minikube-vanilla
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+  - port: 8080
+  selector:
+    app: rocketservice-minikube-vanilla
+    tier: backend
