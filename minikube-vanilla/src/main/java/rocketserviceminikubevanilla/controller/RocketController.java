@@ -10,8 +10,7 @@ public class RocketController {
     @GetMapping(value = "/rocket/stats")
     public ResponseEntity hello() {
         return ResponseEntity.ok()
-                .header("Custom-Header", "foo")
-                .body("Rocket name is RC1 with altitude of ::");
+                .body("{"name":"Rocket name is RC1 with altitude of 12K");
     }
 
 }
